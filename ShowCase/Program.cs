@@ -9,5 +9,7 @@ class Program
         Console.WriteLine("April 9, 2025");
         Console.WriteLine("******");
         Console.WriteLine("Feature to display local data on web page added by Natalie Rekai");
+        Console.WriteLine("******");
+        Console.WriteLine("Database access has already been done on April 1, 2025 by Natalie Rekai");
     }
 }
