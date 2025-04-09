@@ -33,14 +33,8 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: DotNetCoreCLI@2
+- task: PublishBuildArtifacts@1
   inputs:
-    command: publish
-    publishWebProjects: True
-    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
-    zipAfterPublish: True
-
-- task: PublishPipelineArtifact@1
-  inputs:
-    targetPath: '$(Build.ArtifactStagingDirectory)' 
-    artifactName: 'nata_quiz4_application_artifact'    
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'nata_quiz4_application_artifact'
+    publishLocation: 'Container'
