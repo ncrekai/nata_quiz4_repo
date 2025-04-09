@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: 'Natalie-SelfHost'
+  vmImage: 'windows-latest'
 
 variables:
   solution: '**/*.sln'
